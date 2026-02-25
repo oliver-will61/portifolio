@@ -1,65 +1,34 @@
     const listaHabilidades = [
-    {
-        titulo:"Jira",
-        icone: "../assets/icones-habilidades/jira.svg"
-    },
 
     {
         titulo: "TypeScript",
         icone:"../assets/icones-habilidades/typescript.svg"
     },
-    {
-        titulo: "Spring Boot",
-        icone:"../assets/icones-habilidades/spring.svg"
-    },
+
     {
         titulo:"Python",
         icone:"../assets/icones-habilidades/python.svg"
     },
-    
+
     {
-        titulo:"Postman",
-        icone:"../assets/icones-habilidades/postman.svg"
-    }, 
-    
+        titulo:"JavaScript",
+        icone:"../assets/icones-habilidades/js.svg"
+    },
+
+
     {
-        titulo:"Node.JS",
-        icone:"../assets/icones-habilidades/nodejs.svg"
+    titulo:"Node.JS",
+    icone:"../assets/icones-habilidades/nodejs.svg"
     }, 
 
     {
         titulo:"MySQL",
         icone:"../assets/icones-habilidades/mysql.svg"
-    }, 
+    },
 
     {
-        titulo:"Linux",
-        icone:"../assets/icones-habilidades/linux.svg"
-    }, 
-
-    {
-        titulo:"AWS",
-        icone:"../assets/icones-habilidades/aws.svg"
-    }, 
-
-    {
-        titulo:"JavaScript",
-        icone:"../assets/icones-habilidades/js.svg"
-    }, 
-
-    {
-        titulo:"Dart",
-        icone:"../assets/icones-habilidades/dart.svg"
-    }, 
-
-    {
-        titulo:"Java",
-        icone:"../assets/icones-habilidades/java.svg"
-    }, 
-
-    {
-        titulo:"HTML",
-        icone:"../assets/icones-habilidades/html5.svg"
+        titulo:"Git",
+        icone:"../assets/icones-habilidades/git.svg"
     }, 
 
     {
@@ -68,8 +37,43 @@
     }, 
 
     {
-        titulo:"Git",
-        icone:"../assets/icones-habilidades/git.svg"
+        titulo:"Postman",
+        icone:"../assets/icones-habilidades/postman.svg"
+    }, 
+
+    {
+        titulo:"Linux",
+        icone:"../assets/icones-habilidades/linux.svg"
+    }, 
+
+    {
+        titulo:"Java",
+        icone:"../assets/icones-habilidades/java.svg"
+    }, 
+
+    {
+        titulo: "Spring Boot",
+        icone:"../assets/icones-habilidades/spring.svg"
+    },
+
+    {
+        titulo:"HTML",
+        icone:"../assets/icones-habilidades/html5.svg"
+    },
+
+    {
+        titulo:"CSS3",
+        icone:"../assets/icones-habilidades/css3.svg"
+    }, 
+
+    {
+        titulo:"AWS",
+        icone:"../assets/icones-habilidades/aws.svg"
+    },  
+
+    {
+        titulo:"Express",
+        icone:"../assets/icones-habilidades/express.svg"
     }, 
 
     {
@@ -77,18 +81,10 @@
         icone:"../assets/icones-habilidades/bootstrap.svg"
     }, 
 
-    {
-        titulo:"CSS3",
-        icone:"../assets/icones-habilidades/css3.svg"
-    }, 
+
     {
         titulo:"Docker",
         icone:"../assets/icones-habilidades/docker.svg"
-    }, 
-
-    {
-        titulo:"Express",
-        icone:"../assets/icones-habilidades/express.svg"
     }, 
 
     {
@@ -107,9 +103,24 @@
     }, 
 
     {
+        titulo:"Jira",
+        icone: "../assets/icones-habilidades/jira.svg"
+    },
+
+    {
         titulo:"Figma",
         icone:"../assets/icones-habilidades/figma.svg"
-    }
+    },
+
+    {
+        titulo:"Pandas",
+        icone:"../assets/icones-habilidades/pandas-noturno.svg"
+    },
+
+    {
+        titulo:"Pygame",
+        icone:"../assets/icones-habilidades/pygame.svg"
+    }, 
 ]
 
 export default listaHabilidades
