@@ -26,17 +26,23 @@ body{
 }
 
 header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--backgroundColor);
+}
+
+header div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 30px 10%;
     border-bottom: 1px solid var(--corPrincipal);
-    
 }
 
 main {
     padding: 0 10%;
-    margin-top: 100px;
+    margin-top: 209px; /*  = 100 margin padrão + 109 altura do header fixado */
     display: flex;
     flex-direction: column;
     gap: 100px;
