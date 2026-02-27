@@ -231,6 +231,10 @@ h3{
     gap: 50px;
 }
 
+.container-btn-contatos a{
+    text-decoration: none;
+}
+
 .btn-contato{
     gap: 5px;
     font-weight: bold;
