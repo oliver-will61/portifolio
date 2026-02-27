@@ -204,6 +204,8 @@ h3{
 .projeto-card p {
     font-size: var(--tamanhoFonteSegundaria);
     line-height: 19px;
+    height: 100%;
+    max-height: 250px;
 }
 
 .icones-container {
@@ -235,8 +237,7 @@ h3{
 }
 
 .imagem-projeto{
-    max-width: 470px;
-    max-height: 222px;
+    width: 100%;
 }
 
 .btn a {
