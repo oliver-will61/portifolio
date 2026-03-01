@@ -8,18 +8,32 @@
 </head>
 <body>
     <header>
-        <div>
-            <img src="assets/menu-hamburguer.svg">
+        <div class="container-header">
+            <!-- <div class="menu-hamburguer fechado" id="menu-hamburguer">
+                <img class="icone-menu-hamburguer" src="assets/icones-headers/menu-hamburguer.svg" id="icone-menu-hamburguer"> 
+                <img class="icone-menu-hamburguer-alt hidde" src="assets/icones-headers/menu-hamburguer-alt.svg" id="icone-menu-hamburguer-alt">
+
+                <img class="icone-close-modal hidde" src="assets/icones-headers/close.svg" alt="icone de fechar" id="icone-close-modal">
+                <img class="icone-close-modal-alt hidde" src="assets/icones-headers/close-alt.svg" alt="icone de fechar alternativo" id="icone-close-modal-alt">
+
+            </div> -->
+
+            <div class="menu-hamburguer fechado" id="menu-hamburguer">
+                <img class="icone-menu" src="assets/icones-headers/menu-hamburguer.svg" id="icone-menu"> 
+                <img class="icone-close hidde" src="assets/icones-headers/close.svg" id="icone-close">
+            </div>
+
             
             <h1>Portfólio</h1>
 
-            <img src="assets/Switch.svg" alt="botão modo claro/noturno">
+            <img src="assets/icones-headers/Switch.svg" alt="botão modo claro/noturno">
 
         </div>
         
     </header>
 
     <main>
+
         <section class="container-ap">
             <div class="container-ap-text">
                 <h2>
@@ -31,7 +45,7 @@
 
                 <div class="container-btn-ap">
                     <button class="btn">Baixe o  Curriculo</button>
-                    <button class="btn btn-alt">Entrar em Contato</button>
+                    <button class="btn btn-alt">Entre em Contato</button>
                 </div>
             </div>
 
@@ -40,7 +54,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="sobre" class="container-section">
             <h1>Sobre Mim</h1>
             <p class="texto-sobre">
                 Formado em análise e desenvolvimento de sistemas. Gosto muito de tecnologia, busco constantemente aprimorar meus conhecimentos por meio de cursos, livros, workshops e palestras. 
@@ -48,7 +62,7 @@
             </p>
         </section>
 
-        <section>
+        <section id="formacao" class="container-section">
             <h1>Formação</h1>
             
             <div class="container-formacao">
@@ -90,7 +104,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="habilidades" class="container-section">
             <h1>Habilidades</h1>
             <div class="container-habilidades">
                 <div class="container-habilidades-icones" id="container-habilidades-icones">
@@ -98,13 +112,13 @@
             </div>
         </section>
 
-        <section>
+        <section id="projetos" class="container-section">
             <h1>Projetos</h1>
             <div class="container-projeto-card" id="container-projeto-card">
             </div>
         </section>
 
-        <section>
+        <section id="contatos" class="container-section">
             <h1>Contatos</h1>
             <div class="container-btn-contatos">
                 <a href="https://github.com/oliver-will61">
@@ -130,6 +144,18 @@
             </div>
         </section>
     </main>
+
+
+    <div class="modal" id="modal">
+        <h1>Bem-vindo ao meu portfólio!</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#formacao">Formação</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contatos">Contatos</a>
+        </nav>
+    </div>
 
     <script  type="module" src="js/main.js"></script>
 
