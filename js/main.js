@@ -7,10 +7,11 @@ const iconeMenu = document.querySelector('#icone-menu')
 const iconeClose =  document.querySelector('#icone-close')
  
 const body = document.querySelector('body')
+const header = document.querySelector('header')
 
-// abre a modal
-iconeMenu.addEventListener("click", ()=> {
+const linkNav = document.querySelectorAll("#link-nav")
 
+function openModal(){
     containerModal.style.display = "inline"  
 
     iconeClose.classList.remove("hidde")
@@ -18,11 +19,10 @@ iconeMenu.addEventListener("click", ()=> {
 
     //impede a rolage do body
     body.style.overflow = "hidden"
-})
+    header.classList.add("alt-header")
+}
 
-// fecha modal
-iconeClose.addEventListener("click", ()=> {
-
+function closeModal() { 
     containerModal.style.display = "none"  
 
     iconeMenu.classList.remove("hidde")
@@ -30,8 +30,28 @@ iconeClose.addEventListener("click", ()=> {
 
     //retorna a rolagem
     body.style.overflow = "auto"
+    header.classList.remove('alt-header');
+}
+
+
+// abre a modal
+iconeMenu.addEventListener("click", ()=> {
+    openModal()
 })
 
+// fecha modal
+iconeClose.addEventListener("click", ()=> {
+    closeModal()
+})
+
+// carrega todos os links de nav da modal
+linkNav.forEach((i) => {
+    console.log(i);
+
+    i.addEventListener("click", () => {
+        closeModal()
+    })
+})
 
 
 // carrega escreve no HTML os icones e titulo das habilidades na seção de Habilidades

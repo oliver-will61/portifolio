@@ -4,6 +4,9 @@
 
 :root{
     --backgroundColor:  #333645;
+    --backgroundColor-modal: rgba(0, 0, 0, 0.25);
+    --blur-modal: blur(10px);
+    
     --fontColor: #FFFFFF;
     --corPrincipal: #F8646C;
     --fonte: "Roboto", sans-serif;
@@ -35,6 +38,11 @@ header {
     position: fixed;
     top: 0;
     background-color: var(--backgroundColor);
+    backdrop-filter: var(--blur-modal)
+}
+
+.alt-header {
+    background-color: var(--backgroundColor-modal)
 }
 
 .container-header{
@@ -273,8 +281,8 @@ h3{
     margin-top: var(--altura-fixa-header); 
     padding-top: var(--espacamento-fixo-header);
     z-index: 200;
-    background-color: rgba(0, 0, 0 0.65);
-    backdrop-filter: blur(10px);
+    background-color: var(--backgroundColor-modal);
+    backdrop-filter: var(--blur-modal);
     top:0;
 }
 
@@ -303,16 +311,11 @@ h3{
     color: var(--corPrincipal);
 }
 
-
-
-
-
-
-
-
-
 .menu-hamburguer {
     width: 33px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 
 .icone-menu, .icone-close{
