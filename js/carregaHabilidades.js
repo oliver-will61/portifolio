@@ -3,7 +3,7 @@ import listaHabilidades from "../constants/habilidades.js";
 function carregaHabilidades(){
 
     const  habilidadesHTML = document.querySelector('#container-habilidades-icones')
-    console.log(listaHabilidades)
+    
     for(let i = 0; i < listaHabilidades.length; i++){
 
         

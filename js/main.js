@@ -1,57 +1,28 @@
 import carregaHabilidades from './carregaHabilidades.js'
 import carregaCardProjetos from './carregaProjetos.js'
+import Modal from './modal.js'
 
 
-const containerModal = document.querySelector("#modal") 
-const iconeMenu = document.querySelector('#icone-menu')
-const iconeClose =  document.querySelector('#icone-close')
+const iconeMenuHamburguer = document.querySelector('#icone-menu')
+const iconeCloseMenuHamburguer =  document.querySelector('#icone-close')
  
-const body = document.querySelector('body')
-const header = document.querySelector('header')
 
-const linkNav = document.querySelectorAll("#link-nav")
 
-function openModal(){
-    containerModal.style.display = "inline"  
-
-    iconeClose.classList.remove("hidde")
-    iconeMenu.classList.add ("hidde")
-
-    //impede a rolage do body
-    body.style.overflow = "hidden"
-    header.classList.add("alt-header")
-}
-
-function closeModal() { 
-    containerModal.style.display = "none"  
-
-    iconeMenu.classList.remove("hidde")
-    iconeClose.classList.add ("hidde")
-
-    //retorna a rolagem
-    body.style.overflow = "auto"
-    header.classList.remove('alt-header');
-}
-
+// modal --------------------------------------------------------------
+const modal = new Modal(iconeMenuHamburguer, iconeCloseMenuHamburguer)
 
 // abre a modal
-iconeMenu.addEventListener("click", ()=> {
-    openModal()
+iconeMenuHamburguer.addEventListener("click", ()=> {
+    modal.openModal()
 })
 
 // fecha modal
-iconeClose.addEventListener("click", ()=> {
-    closeModal()
+iconeCloseMenuHamburguer.addEventListener("click", ()=> {
+    modal.closeModal()
 })
 
 // carrega todos os links de nav da modal
-linkNav.forEach((i) => {
-    console.log(i);
-
-    i.addEventListener("click", () => {
-        closeModal()
-    })
-})
+modal.carregaLinksNav()
 
 
 // carrega escreve no HTML os icones e titulo das habilidades na seção de Habilidades
