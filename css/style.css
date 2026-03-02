@@ -26,6 +26,21 @@
 
 }
 
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--backgroundColor);
     font-family: var(--fonte);
@@ -284,6 +299,7 @@ h3{
     background-color: var(--backgroundColor-modal);
     backdrop-filter: var(--blur-modal);
     top:0;
+    animation: fade 1s;
 }
 
 .modal h1{
@@ -304,6 +320,7 @@ h3{
     font-weight: bold;
     text-decoration: none;
     color: var(--fontColor);
+    transition: 0.3s;
 }
 
 .modal a:hover{
@@ -341,3 +358,5 @@ h3{
 .hidde {
     display: none;
 }
+
+
