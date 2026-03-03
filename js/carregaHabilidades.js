@@ -5,9 +5,6 @@ function carregaHabilidades(){
     const  habilidadesHTML = document.querySelector('#container-habilidades-icones')
     
     for(let i = 0; i < listaHabilidades.length; i++){
-
-        
-        console.log(listaHabilidades[i].titulo);
         
         habilidadesHTML.innerHTML += `
             <div class="habilidades-icones">

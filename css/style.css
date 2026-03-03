@@ -5,9 +5,13 @@
 :root{
     --backgroundColor:  #333645;
     --backgroundColor-modal: rgba(0, 0, 0, 0.25);
+    --backgroundColor-modal-light-mode: rgba(0, 0, 0, 0.65);
+    --backgroundColor-light-mode: #FFFFFF;
     --blur-modal: blur(10px);
     
     --fontColor: #FFFFFF;
+    --fontColor-light-mode: black;
+
     --corPrincipal: #F8646C;
     --fonte: "Roboto", sans-serif;
 
@@ -21,7 +25,7 @@
     --cabecalhoTerciario: 1.25em;
     --cabecalhoCard: 0.9em;
 
-     --altura-fixa-header: 93px;  /* 109 = (tamanho do header) */
+     --altura-fixa-header: 93px;  /* 93 = (tamanho do header) */
      --espacamento-fixo-header: 25px; /* 25 = espaço entre o header fixado com os demais objetos*/
 
 }
@@ -46,6 +50,7 @@ body{
     font-family: var(--fonte);
     color: var(--fontColor);
     font-size: var(--tamanhoFontePrincipal);
+    transition: 0.5s;
 }
 
 header {
@@ -53,10 +58,12 @@ header {
     position: fixed;
     top: 0;
     background-color: var(--backgroundColor);
-    backdrop-filter: var(--blur-modal)
+    backdrop-filter: var(--blur-modal);
+    color:var(--fontColor)
 }
 
 .alt-header {
+    transition: 0.5s;
     background-color: var(--backgroundColor-modal)
 }
 
@@ -109,8 +116,6 @@ header {
 .switch-input:checked +.switch-label .ball{
     transform: translateX(28px); /*28 = 52 (comprimento do label) - 24 (comprimento da bolinha)*/
 }
-
-
 
 main {
     padding: 0 10%;
@@ -196,6 +201,7 @@ h2 b {
 .btn-alt{
     background-color: transparent;
     border: 1px var(--corPrincipal) solid;
+    transition: 0.5s;
 }
 
 .texto-sobre{
@@ -330,7 +336,10 @@ h3{
 .btn a {
     text-decoration: none;
     color: var(--fontColor);
+    transition: 0.5s;
 }
+
+/*Menu Hamburguer e modal*/
 
 .modal{
     display: none;
@@ -344,6 +353,7 @@ h3{
     backdrop-filter: var(--blur-modal);
     top:0;
     animation: fade 1s;
+    transition: 0.5s;
 }
 
 .modal h1{
@@ -402,5 +412,24 @@ h3{
 .hidde {
     display: none;
 }
+
+/*light mode*/
+
+.ligth-mode {
+    background-color: var(--backgroundColor-light-mode);
+    color: var(--fontColor-light-mode);
+    transition: 0.5s;
+}
+
+.ligth-mode .btn-alt, .ligth-mode .btn-alt a{
+    color: var(--fontColor-light-mode);
+    transition: 0.5s;
+}
+
+.ligth-mode .modal, .ligth-mode .alt-header {
+    transition: 0.5s;
+    background-color: var(--backgroundColor-modal-light-mode);
+}
+
 
 
