@@ -1,10 +1,9 @@
-import listaHabilidades from "../constants/habilidades.js"
+import {listaHabilidades} from "../constants/habilidades.js"
 
 
 const nodeHabilidade = listaHabilidades.find(item => item.titulo === "Node.JS")
 const expressHabilidade = listaHabilidades.find(item => item.titulo == "Express")
 const mongoHabilidade = listaHabilidades.find(item => item.titulo == "MongoDB")
-
 const JavaScriptHabilidade = listaHabilidades.find(item => item.titulo == "JavaScript")
 const cssHabilidade = listaHabilidades.find(item => item.titulo == "CSS3")
 const htmlHabilidade = listaHabilidades.find(item => item.titulo == "HTML")
@@ -14,13 +13,13 @@ const mysqlHabilidade = listaHabilidades.find(item => item.titulo === "MySQL")
 const pandasHabilidade = listaHabilidades.find(item => item.titulo === "Pandas");
 const pygameHabilidade = listaHabilidades.find(item => item.titulo === "Pygame")
 
-function carregaCardProjetos(){
+function carregaCardProjetos(mode){
     const listaProjetos = [
         {
             nome: "Contador Personalizado",
             descricao: "Aplicação web que realiza contagem dinâmicos utilizando HTML, CSS e JavaScript puro, permitindo ao usuário criar múltiplos contadores personalizados, incrementar e decrementar valores individualmente e salvar os dados no navegador por meio do LocalStorage. O projeto aplica programação orientada a objetos com a classe Contador, manipulação dinâmica do DOM, controle de eventos com addEventListener e serialização de dados com JSON, demonstrando gerenciamento de estado no front-end sem uso de frameworks.",
-            habilidade: [
-                htmlHabilidade.icone, cssHabilidade.icone, JavaScriptHabilidade.icone
+            iconesHabilidades: [
+                htmlHabilidade.icones, cssHabilidade.icones, JavaScriptHabilidade.icones
             ],
             imagem: "../assets/projeto-imagens/contador-personalizado/contador-personalizado.png",
             acesso: "",
@@ -34,8 +33,8 @@ function carregaCardProjetos(){
                 A arquitetura foi estruturada de forma modular, com separação em classes responsáveis por nível, cobra, comida, pontuação e menu,  garantindo melhor organização, manutenção e escalabilidade do código. 
                 O resultado é uma aplicação com jogabilidade fluida, visual simples e código bem estruturado, demonstrando domínio de Python, lógica de programação, desenvolvimento de jogos e utilização de bibliotecas gráficas.
                 O jogo  se encontra disponivel para Windows e Linux`,
-            habilidade: [
-                pythonHabilidade.icone, pygameHabilidade.icone
+            iconesHabilidades: [
+                pythonHabilidade.icones, pygameHabilidade.icones
             ],
             imagem: "../assets/projeto-imagens/python-snake/python-snake.png",
             acesso: "https://github.com/oliver-will61/python-snake",
@@ -56,8 +55,8 @@ function carregaCardProjetos(){
                 A escolha do TypeScript como linguagem de desenvolvimento, combinada com
                 a arquitetura monolítica gerenciada pelo Express.js, permitiu a construção de
                 uma API RESTful simples e robusta.`,
-            habilidade: [
-                typescriptHabilidade.icone, expressHabilidade.icone, mysqlHabilidade.icone
+            iconesHabilidades: [
+                typescriptHabilidade.icones, expressHabilidade.icones, mysqlHabilidade.icones
             ],
             imagem: "../assets/projeto-imagens/api-sistema-hospitalar/api-sistema-hospitalar.png",
             acesso: "https://github.com/oliver-will61/api-sistema-hospitalar",
@@ -75,16 +74,16 @@ function carregaCardProjetos(){
                 A arquitetura separa responsabilidades entre servidor e engine de processamento, garantindo escalabilidade, 
                 organização e facilidade de manutenção. O projeto demonstra domínio em desenvolvimento backend, integração 
                 entre linguagens, criação de APIs e manipulação avançada de dados.`,
-            habilidade: [
-                typescriptHabilidade.icone, expressHabilidade.icone, pythonHabilidade.icone, pandasHabilidade.icone
+            iconesHabilidades: [
+                typescriptHabilidade.icones, expressHabilidade.icones, pythonHabilidade.icones, pandasHabilidade.icones
             ],
             imagem: "../assets/projeto-imagens/goodbyepdf/goodbyepdf.png"
         }
     ]
 
     const containerProjetoCardHTML = document.querySelector("#container-projeto-card")
-
-
+    containerProjetoCardHTML.innerHTML = ""
+    
     //carrega os cards de projetos no HTML 
     for (let i = 0; i < listaProjetos.length; i++) {
         containerProjetoCardHTML.innerHTML += 
@@ -99,12 +98,23 @@ function carregaCardProjetos(){
 
         const iconesContainer = document.querySelectorAll("#icones-container") 
 
+        console.log(listaProjetos[i].iconesHabilidades);
         //carrega os icones das habilidades no HTML
-        for(let y = 0; y < listaProjetos[i].habilidade.length; y++){    
-            iconesContainer[i].innerHTML += 
-                `<img src = ${listaProjetos[i].habilidade[y]}>`
+
+        for(let y = 0; y < listaProjetos[i].iconesHabilidades.length; y++){    
+
+            if(mode == "light") {
+                iconesContainer[i].innerHTML += 
+                    `<img src = ${listaProjetos[i].iconesHabilidades[y][0].iconeLight}>`                                
+            } 
+            
+            else {
+                iconesContainer[i].innerHTML += 
+                    `<img src = ${listaProjetos[i].iconesHabilidades[y][0].iconeDark}>`
+            }
         }
 
+        // carrega botões de ACESSO e REPOSITORIO
         const projetoCardHTML = document.querySelectorAll('#projeto-card')
 
         projetoCardHTML[i].innerHTML += 
