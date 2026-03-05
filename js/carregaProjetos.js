@@ -17,7 +17,10 @@ function carregaCardProjetos(mode){
     const listaProjetos = [
         {
             nome: "Contador Personalizado",
-            descricao: "Aplicação web que realiza contagem dinâmicos utilizando HTML, CSS e JavaScript puro, permitindo ao usuário criar múltiplos contadores personalizados, incrementar e decrementar valores individualmente e salvar os dados no navegador por meio do LocalStorage. O projeto aplica programação orientada a objetos com a classe Contador, manipulação dinâmica do DOM, controle de eventos com addEventListener e serialização de dados com JSON, demonstrando gerenciamento de estado no front-end sem uso de frameworks.",
+            descricao: `Aplicação web que realiza contagem dinâmicos utilizando HTML, CSS e JavaScript puro, permitindo ao usuário criar múltiplos 
+                contadores personalizados, incrementar e decrementar valores individualmente e salvar os dados no navegador por meio do LocalStorage. 
+                O projeto aplica programação orientada a objetos com a classe Contador, manipulação dinâmica do DOM, controle de eventos com 
+                addEventListener e serialização de dados com JSON, demonstrando gerenciamento de estado no front-end sem uso de frameworks.`,
             iconesHabilidades: [
                 htmlHabilidade.icones, cssHabilidade.icones, JavaScriptHabilidade.icones
             ],
@@ -28,11 +31,10 @@ function carregaCardProjetos(mode){
 
         {
             nome: "Python Snake",
-            descricao: `Python Snake foi um projeto acadêmico no qual desenvolvi uma releitura moderna do clássico jogo Snake, utilizando Python com a biblioteca Pygame. A aplicação conta com ajuste de dificuldade,
-                sistema de pontuação com registro de recorde e persistência de dados. O jogo também inclui efeitos sonoros para movimentação e alimentação, além de música de fundo em loop, tornando a jogabilidade mais imersiva.
-                A arquitetura foi estruturada de forma modular, com separação em classes responsáveis por nível, cobra, comida, pontuação e menu,  garantindo melhor organização, manutenção e escalabilidade do código. 
-                O resultado é uma aplicação com jogabilidade fluida, visual simples e código bem estruturado, demonstrando domínio de Python, lógica de programação, desenvolvimento de jogos e utilização de bibliotecas gráficas.
-                O jogo  se encontra disponivel para Windows e Linux`,
+            descricao: `Releitura moderna do clássico jogo Snake. Este projeto foi desenvolvido durante a faculdade, nas aulas de Lógica de Programação e Algoritmos.
+                O jogo foi implementado em Python, utilizando a biblioteca Pygame, e sua arquitetura foi estruturada de forma modular, com organização baseada em classes, 
+                O jogo apresenta jogabilidade fluida, visual simples e um código bem organizado. 
+                Atualmente está disponível para os sistemas operacionais Windows e Linux.`,
             iconesHabilidades: [
                 pythonHabilidade.icones, pygameHabilidade.icones
             ],
@@ -43,18 +45,7 @@ function carregaCardProjetos(mode){
         
         {
             nome: "API Sistema Hospitalar",
-            descricao: `Projeto para a faculdade que apresenta a implementação de um sistema hospitalar backend,
-                desenvolvido para gerenciar o fluxo completo de atendimento médico - desde o
-                agendamento de consultas até o gerenciamento de prontuários eletrônicos,
-                exames e prescrições médicas.
-                Entre os principais objetivos destacam-se: a implementação de controle de
-                acesso baseado em perfis de usuário (pacientes, profissionais de saúde e
-                administradores), a garantia de segurança através de criptografia de dados
-                sensíveis, a prevenção de vulnerabilidades comuns como SQL Injection, e a
-                criação de uma base para futuras expansões do sistema.
-                A escolha do TypeScript como linguagem de desenvolvimento, combinada com
-                a arquitetura monolítica gerenciada pelo Express.js, permitiu a construção de
-                uma API RESTful simples e robusta.`,
+            descricao: `API para sistema hospitalar desenvolvida na faculdade durante o período de conclusão de curso. O back-end foi desenvolvido em TypeScript e Express, utilizando MySQL como banco de dados. A API gerencia o fluxo completo de atendimento médico — desde o agendamento de consultas até o gerenciamento de prontuários, exames e prescrições médicas. Destacam-se a implementação de controle de acesso baseado em perfis de usuário, segurança por meio da criptografia de dados sensíveis, prevenção de vulnerabilidades comuns, como SQL Injection, e a criação de uma base sólida para futuras expansões do sistema.`,
             iconesHabilidades: [
                 typescriptHabilidade.icones, expressHabilidade.icones, mysqlHabilidade.icones
             ],
@@ -65,15 +56,7 @@ function carregaCardProjetos(mode){
 
         {
             nome: "GoodbyePDF",
-            descricao: `É um projeto open source em desenvolvimento que propõe uma alternativa ao iLovePDF, 
-                oferecendo uma aplicação e API voltadas para conversão e manipulação de arquivos em diferentes formatos. 
-                A plataforma permite transformar dados entre múltiplos tipos, como converter arquivos JSON em planilhas Excel 
-                e vice-versa, facilitando a interoperabilidade entre sistemas e fluxos de dados. 
-                O backend é desenvolvido em TypeScript utilizando Express, enquanto a camada de processamento e conversão é 
-                construída em Python, com suporte de bibliotecas como Pandas para tratamento e estruturação de dados. 
-                A arquitetura separa responsabilidades entre servidor e engine de processamento, garantindo escalabilidade, 
-                organização e facilidade de manutenção. O projeto demonstra domínio em desenvolvimento backend, integração 
-                entre linguagens, criação de APIs e manipulação avançada de dados.`,
+            descricao: `Projeto open source em desenvolvimento que propõe uma alternativa ao iLovePDF,  oferecendo uma aplicação e API voltadas para conversão e manipulação de arquivos em diferentes formatos.  O backend é desenvolvido em TypeScript utilizando Express, enquanto a camada de processamento e conversão é construída em Python, com suporte de bibliotecas como Pandas para tratamento e estruturação de dados A plataforma permite transformar dados entre múltiplos tipos, como converter arquivos JSON em planilhas Excel `,
             iconesHabilidades: [
                 typescriptHabilidade.icones, expressHabilidade.icones, pythonHabilidade.icones, pandasHabilidade.icones
             ],
