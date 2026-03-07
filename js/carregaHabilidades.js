@@ -14,7 +14,7 @@ function carregaHabilidades(modo){
             habilidadesHTML.innerHTML += `
                 <div class="habilidades-icones">
                     <img src=${listaHabilidades[i].icones[0].iconeLight} alt=logo do ${listaHabilidades[i].titulo}>
-                    <p>${listaHabilidades[i].titulo}</p>
+                    <h4>${listaHabilidades[i].titulo}</h4>
                 </div>`            
         }
 
@@ -22,7 +22,7 @@ function carregaHabilidades(modo){
             habilidadesHTML.innerHTML += `
                 <div class="habilidades-icones">
                     <img src=${listaHabilidades[i].icones[0].iconeDark} alt=logo do ${listaHabilidades[i].titulo}>
-                    <p>${listaHabilidades[i].titulo}</p>
+                    <h4>${listaHabilidades[i].titulo}</h4>
                 </div>`   
         }
     }

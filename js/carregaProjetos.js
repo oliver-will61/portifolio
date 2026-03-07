@@ -72,7 +72,7 @@ function carregaCardProjetos(mode){
         containerProjetoCardHTML.innerHTML += 
 
             `<div class="projeto-card" id="projeto-card">
-                <h3>${listaProjetos[i].nome}</h3>
+                <h4>${listaProjetos[i].nome}</h4>
                 <img src =${listaProjetos[i].imagem} class="imagem-projeto">
                 <p>${listaProjetos[i].descricao}</p>
 

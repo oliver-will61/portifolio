@@ -22,17 +22,19 @@
     --corPrincipal: #F8646C;
     --fonte: "Roboto", sans-serif;
 
-    --tamanhoFontePrincipal: 1em;
-    --tamanhoFonteSegundaria: 0.85em;
+    --tamanhoFontePrincipal: 1.2em;
+    --tamanhoFonteSegundaria: 0.9em;
 
     --cabecalhoPrincipal: 2em;
     --cabecalhoPrincipalHouver: 3em;
-
-    --cabecalhoSegundario:  1.5em;
+    
+    --cabecalhoSegundario:  1.8em;
     --cabecalhoTerciario: 1.25em;
+    --cabecalho4: 1em
+
     --cabecalhoCard: 0.9em;
 
-     --altura-fixa-header: 94.2px;  /* 93 = (tamanho do header) */
+     --altura-fixa-header: 94px;  /* 93 = (tamanho do header) + 1 da borda */
      --espacamento-fixo-header: 25px; /* 25 = espaço entre o header fixado com os demais objetos*/
 
 }
@@ -56,18 +58,37 @@ body{
     background-color: var(--backgroundColor);
     font-family: var(--fonte);
     color: var(--fontColor);
-    font-size: var(--tamanhoFontePrincipal);
+    font-size: 1em;
     transition: 0.5s;
     padding-bottom: 5em;
 }
 
+p {
+    font-size: var(--tamanhoFontePrincipal);
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
 header {
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
     background-color: var(--backgroundColor);
     backdrop-filter: var(--blur-modal);
-    color:var(--fontColor)
+    color:var(--fontColor);
+}
+
+/*borda da parte de baixo do header*/
+.line {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid var(--corPrincipal);
+    background-color: var(--backgroundColor);
 }
 
 .alt-header {
@@ -79,8 +100,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.875em 10%;
-    border-bottom: 1px solid var(--corPrincipal);
+    padding: 1.875em 0;
 }
 
 .switch {
@@ -126,7 +146,6 @@ header {
 }
 
 main {
-    padding: 0 10%;
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -144,8 +163,8 @@ main {
     margin-top: var(--espacamento-fixo-header);    
 }
 
-h1 {
-    font-size: var(--cabecalhoPrincipal);
+h2 {
+    font-size: var(--cabecalhoSegundario);
     font-weight: bold;
     text-align: center;
 }
@@ -156,6 +175,7 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: var(--altura-fixa-header);
+    flex-wrap: wrap-reverse;
 }
 
 .container-ap p {
@@ -175,18 +195,14 @@ h1 {
     gap: 0.875em
 }
 
-
-.container-ap-frase{
-    width: 312px;
-}
-
-h2 {
-    font-size: var(--cabecalhoSegundario);
+h1 {
+    font-size: var(--cabecalhoPrincipal);
     font-weight: bold;
-    line-height: 28px;
+    text-align: center;
+    line-height: 1.2em;
 }
 
-h2 b {
+.container-ap-frase  h1 b {
     color: var(--corPrincipal);
 }
 
@@ -196,13 +212,11 @@ h2 b {
 }
 
 .btn {
-    width: 132px;
-    height: 38px;
     background-color: var(--corPrincipal);
     border: none;
     color: var(--fontColor);
     border-radius: 8px;
-    padding: 0;
+    padding: 0.7em 3em;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -216,7 +230,7 @@ h2 b {
 }
 
 .texto-sobre{
-    width: 426px;
+    max-width:426px;
     text-align: center;
 }
 
@@ -226,8 +240,14 @@ h2 b {
     display: flex;
     justify-content: center;
     width: 100%;
-    gap: 1.875em;
+    gap: 1.875em;   
 }
+
+.container-formacao  p {
+    line-height: 28px;
+}
+ 
+
 
 .container-instituicao{
     width: 50%;
@@ -238,8 +258,6 @@ h2 b {
 
 .container-instituicao p {
     font-size: var(--tamanhoFonteSegundaria);
-    line-height: 24px;
-
 }
 
 .container-curso{
@@ -252,10 +270,6 @@ h3{
     font-weight: bold;
     font-size: var(--cabecalhoTerciario);
     margin-bottom: 10px;
-}
-
-.container-curso p {
-    line-height: 24px;
 }
 
 .container-curso b {
@@ -280,10 +294,15 @@ h3{
     gap: 0.9375em;
 }
 
+h4 {
+    font-size: var(--cabecalho4);
+}
+
 .container-projeto-card{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;    
     gap: 3.75em;
+    
 }
 
 .projeto-card{
@@ -293,17 +312,17 @@ h3{
     border: 4px solid var(--corPrincipal);
     border-radius: 25px;
     padding: 1.875em 1.25em;
-    gap: 1.375em;
+    gap: 1.5em;
     max-width: 455.5px;
 }
 
-.projeto-card h3 {
-    font-size: var(--cabecalhoCard)
+.projeto-card h4 {
+    font-weight: bold;
 }
 
 .projeto-card p {
     font-size: var(--tamanhoFonteSegundaria);
-    line-height: 19px;
+    line-height: 23px;
     height: 100%;
     max-height: 250px;
 }
@@ -318,11 +337,16 @@ h3{
 .container-btn-card{
     display: flex;
     gap: 1.25em;
+    margin-top: 0.5em;
+    width: 100%;
+    justify-content: center;
 }
 
 .container-btn-contatos {
+    width: 100%;
     display: flex;
     gap: 3.125em;
+    justify-content: center;
 }
 
 .container-btn-contatos a{
@@ -368,6 +392,7 @@ h3{
 }
 
 .modal h1{
+    text-align: center;
     color: var(--corPrincipal);
 }
 
@@ -445,3 +470,9 @@ h3{
 
 
 
+@media (max-width: 500px) {
+
+    .container-btn-contatos{
+        flex-direction: column;
+    }
+}
