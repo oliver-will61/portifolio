@@ -8,46 +8,72 @@
 </head>
 <body>
     <header>
-        <img src="assets/menu-hamburguer.svg">
-        
-        <h1>Portfólio</h1>
+        <div class="container-header container">
 
-        <img src="assets/Switch.svg" alt="botão modo claro/noturno">
+            <div class="menu-hamburguer fechado" id="menu-hamburguer">
+                <img class="icone-menu" src="assets/icones-headers/menu-hamburguer.svg" id="icone-menu"> 
+                <img class="icone-close hidde" src="assets/icones-headers/close.svg" id="icone-close">
+            </div>
+
+            
+            <h2>Portfólio</h2>
+
+            <div class="switch">
+                <input type="checkbox" id="switch-input" class="switch-input">
+                <label class="switch-label"for="switch-input">
+                    <div class=ball></div>
+                </label>
+            </div>
+
+             <!-- <img src="assets/icones-headers/Switch.svg" alt="botão modo noturno" id="btn-switch-noturno"> -->
+            <!--<img src="assets/icones-headers/Switch-light.svg" alt="botão modo claro" id="btn-switch-claro"> -->
+
+        </div>
         
+        <div class="line"></div>
     </header>
 
-    <main>
-        <section class="container-ap">
+    <main class="container">
+
+        <section class="container-ap" id="sobre-ap">
             <div class="container-ap-text">
-                <h2>
-                    Olá, eu sou o <b>Willian Ribeiro</b>,
-                    bem-vindo ao meu portfólio!
-                </h2>
+
+                <div class="container-ap-frase">
+                    <h1> 
+                        Olá, bem-vindo ao meu portfólio!<br>
+                        Eu sou o <b>Willian Ribeiro</b>
+                    </h1>
+                 
+  
+                   
+          
+                </div>
 
                 <p>DESENVOLVEDOR FULL STACK</p>
 
                 <div class="container-btn-ap">
                     <button class="btn">Baixe o  Curriculo</button>
-                    <button class="btn btn-alt">Entrar em Contato</button>
+                    <button class="btn btn-alt">Entre em Contato</button>
                 </div>
             </div>
 
             <div class="container-img">
-                <img src="assets/foto-de-perfil.jpeg" width="204" height="308.65">
+                <!-- width="204" height="308.65" -->
+                <img class="imagem-perfil" src="assets/foto-de-perfil.jpeg">
             </div>
         </section>
 
-        <section>
-            <h1>Sobre Mim</h1>
+        <section id="sobre" class="container-section">
+            <h2>Sobre Mim</h2>
             <p class="texto-sobre">
                 Formado em análise e desenvolvimento de sistemas. Gosto muito de tecnologia, busco constantemente aprimorar meus conhecimentos por meio de cursos, livros, workshops e palestras. 
                 Tenho especialização em Java, Python, Node.JS, SQL, Git, e Linux.
             </p>
         </section>
 
-        <section>
-            <h1>Formação</h1>
-
+        <section id="formacao" class="container-section">
+            <h2>Formação</h2>
+            
             <div class="container-formacao">
                 <div class="container-instituicao">
                     <h3>UNINTER</h3>
@@ -87,29 +113,55 @@
             </div>
         </section>
 
-        <section>
-            <h1>Habilidades</h1>
+        <section id="habilidades" class="container-section">
+            <h2>Habilidades</h2>
             <div class="container-habilidades">
                 <div class="container-habilidades-icones" id="container-habilidades-icones">
                 </div>
             </div>
         </section>
 
-        <section>
-            <h1>Projetos</h1>
+        <section id="projetos" class="container-section">
+            <h2>Projetos</h2>
             <div class="container-projeto-card" id="container-projeto-card">
             </div>
         </section>
 
-        <section>
-            <h1>Contatos</h1>
+        <section id="contatos" class="container-section">
+            <h2>Contatos</h2>
             <div class="container-btn-contatos">
-                <button class=" btn btn-contato"><img src="assets/contato-icones/github.svg" alt="icono do GitHub">GITHUB</button>
-                <button class=" btn btn-contato"><img src="assets/contato-icones/linkedin.svg" alt="icone do linkedin"> LINKENDIN</button>
-                <button class=" btn btn-contato"><img src="assets/contato-icones/whatsapp.svg" alt="icone do whatsapp">(48)99827-4828</button>
+
+           
+                <a href="https://github.com/oliver-will61" class=" btn btn-contato">
+                    <img src="assets/contato-icones/github.svg" alt="icono do GitHub">
+                    GITHUB      
+                </a>
+               
+
+                <a href="https://www.linkedin.com/in/willian-oliveira-ribeiro-97b851243/" class=" btn btn-contato">
+                    <img src="assets/contato-icones/linkedin.svg" alt="icone do linkedin">
+                    LINKENDIN
+                </a>
+                <a href="https://wa.me/5548998274828" class="btn btn-contato">
+                    <img src="assets/contato-icones/whatsapp.svg" alt="icone do whatsapp">
+                    WHATSAPP
+                </a>
+
             </div>
         </section>
     </main>
+
+
+    <div class="modal" id="modal">
+        <h1>Bem-vindo ao meu portfólio!</h1>
+        <nav>
+            <a id="link-nav" href="#sobre">Sobre</a>
+            <a id="link-nav" href="#formacao">Formação</a>
+            <a id="link-nav" href="#habilidades">Habilidades</a>
+            <a id="link-nav" href="#projetos">Projetos</a>
+            <a id="link-nav" href="#contatos">Contatos</a>
+        </nav>
+    </div>
 
     <script  type="module" src="js/main.js"></script>
 

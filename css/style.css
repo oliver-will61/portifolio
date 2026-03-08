@@ -3,61 +3,181 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
+
+    /*ALGUMA REGRAS QUE EU SEGUI
+    
+        usei *PX* em altura e comprimento de icones, efeitos como blur ou bordas, valores fixos e elementos 
+        que tinha um font-size próprio definido, fora isso usei *EM* para tudo
+    */
+
     --backgroundColor:  #333645;
+    --backgroundColor-modal: rgba(0, 0, 0, 0.25);
+    --backgroundColor-modal-light-mode: rgba(0, 0, 0, 0.65);
+    --backgroundColor-light-mode: #FFFFFF;
+    --blur-modal: blur(10px);
+    
     --fontColor: #FFFFFF;
+    --fontColor-light-mode: black;
+
     --corPrincipal: #F8646C;
     --fonte: "Roboto", sans-serif;
 
-    --tamanhoFontePrincipal: 1em;
-    --tamanhoFonteSegundaria: 0.85em;
+    --tamanhoFontePrincipal: 1.2em;
+    --tamanhoFonteSegundaria: 0.9em;
 
     --cabecalhoPrincipal: 2em;
-    --cabecalhoSegundario:  1.5em;
+    --cabecalhoPrincipalHouver: 3em;
+    
+    --cabecalhoSegundario:  1.8em;
     --cabecalhoTerciario: 1.25em;
-    --cabecalhoCard: 0.9em
+    --cabecalho4: 1em;
+
+     --altura-fixa-header: 94px;  /* 93 = (tamanho do header) + 1 da borda */
+     --espacamento-fixo-header:  25px; /* 25 = espaço entre o header fixado com os demais objetos*/
+
+     /*mobile*/
+     --altura-fixa-header-mobile: 62.68px;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--altura-fixa-header);
 }
 
 body{
     background-color: var(--backgroundColor);
     font-family: var(--fonte);
     color: var(--fontColor);
+    font-size: 1em;
+    transition: 0.5s;
+    padding-bottom: 5em;
+}
+
+p {
     font-size: var(--tamanhoFontePrincipal);
-    
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
 }
 
 header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: var(--backgroundColor);
+    backdrop-filter: var(--blur-modal);
+    color:var(--fontColor);
+}
+
+/*borda da parte de baixo do header*/
+.line {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid var(--corPrincipal);
+    background-color: var(--backgroundColor);
+}
+
+.alt-header {
+    transition: 0.5s;
+    background-color: var(--backgroundColor-modal)
+}
+
+.container-header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 10%;
-    border-bottom: 1px solid var(--corPrincipal);
-    
+    padding: 1.875em 0;
+}
+
+.switch {
+    display: flex;
+}
+
+.switch-input{
+    opacity: 0;
+    position: absolute;
+}
+
+
+.switch-label {
+    display: flex;
+    background: var(--corPrincipal);
+    cursor: pointer;
+    width: 52px;
+    height: 24px;
+    padding: 4px;
+    border-radius: 100px;
+    transition: background-color 0.5s;
+}
+
+
+.ball {
+    border-radius: 50%;
+    background-color: var(--backgroundColor);
+    height: 24px;
+    width: 24px;
+    transition: 0.5s
+}
+
+
+/*Seleciona o .switch-label qunado o switch-input estiver como checked*/
+.switch-input:checked +.switch-label {
+    background-color: var(--fontColor);;
+    border-color: var(--corPrincipal);
+}
+
+/*Seleciona o .ball qunado o switch-input estiver como checked*/
+.switch-input:checked +.switch-label .ball{
+    transform: translateX(28px); /*28 = 52 (comprimento do label) - 24 (comprimento da bolinha)*/
 }
 
 main {
-    padding: 0 10%;
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
     gap: 100px;
 }
 
-section {
+.container-section {
     display: flex;
     flex-direction: column;
-    gap: 70px
+    gap: 4.375em;
+    align-items: center;
 }
 
-h1 {
-    font-size: var(--cabecalhoPrincipal);
+.container-section h2 {
+    margin-top: var(--espacamento-fixo-header);    
+}
+
+h2 {
+    font-size: var(--cabecalhoSegundario);
     font-weight: bold;
     text-align: center;
 }
 
 .container-ap{
+    /* margin-top: 193px; = 100 margin padrão + 93 altura do header fixado */
+    padding-top: var(--espacamento-fixo-header);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* flex-wrap: wrap-reverse; */
 }
 
 .container-ap p {
@@ -67,6 +187,7 @@ h1 {
 .container-ap img {
     border-radius: 20px;
     border: 4px var(--corPrincipal) solid;
+    width: 17.5em
 }
 
 .container-ap-text{
@@ -74,33 +195,31 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 14px
+    gap: 1.25em;
 }
 
-h2 {
-    font-size: var(--cabecalhoSegundario);
+h1 {
+    font-size: var(--cabecalhoPrincipal);
     font-weight: bold;
-    width: 312px;
-    line-height: 28px;
+    text-align: center;
+    line-height: 1.2em;
 }
 
-h2 b {
+.container-ap-frase  h1 b {
     color: var(--corPrincipal);
 }
 
 .container-btn-ap{
    display: flex;
-   gap: 10px; 
+   gap: 0.625em; 
 }
 
 .btn {
-    width: 132px;
-    height: 38px;
     background-color: var(--corPrincipal);
     border: none;
     color: var(--fontColor);
     border-radius: 8px;
-    padding: 0;
+    padding: 0.7em 3em;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -110,24 +229,29 @@ h2 b {
 .btn-alt{
     background-color: transparent;
     border: 1px var(--corPrincipal) solid;
+    transition: 0.5s;
 }
 
 .texto-sobre{
-    width: 426px;
+    width: 50%;
+    /* max-width:426px; */
     text-align: center;
 }
 
-section {
-    display: flex;
-    align-items: center;
-}
+
 
 .container-formacao{
     display: flex;
     justify-content: center;
     width: 100%;
-    gap: 30px;
+    gap: 1.875em;   
 }
+
+.container-formacao  p {
+    line-height: 28px;
+}
+ 
+
 
 .container-instituicao{
     width: 50%;
@@ -138,24 +262,19 @@ section {
 
 .container-instituicao p {
     font-size: var(--tamanhoFonteSegundaria);
-    line-height: 24px;
-
 }
 
 .container-curso{
     width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: start;
 }
 
 h3{
     font-weight: bold;
     font-size: var(--cabecalhoTerciario);
     margin-bottom: 10px;
-}
-
-.container-curso p {
-    line-height: 24px;
 }
 
 .container-curso b {
@@ -177,14 +296,18 @@ h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 0.9375em;
+}
+
+h4 {
+    font-size: var(--cabecalho4);
 }
 
 .container-projeto-card{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    max-width: 1047px;
+    grid-template-columns: 1fr 1fr;    
+    gap: 3.75em;
+    
 }
 
 .projeto-card{
@@ -193,38 +316,52 @@ h3{
     align-items: center;
     border: 4px solid var(--corPrincipal);
     border-radius: 25px;
-    padding: 30px 20px;
-    gap: 22px;
+    padding: 1.875em 1.25em;
+    gap: 1.5em;
+    max-width: 455.5px;
 }
 
-.projeto-card h3 {
-    font-size: var(--cabecalhoCard)
+.projeto-card h4 {
+    font-weight: bold;
 }
 
 .projeto-card p {
     font-size: var(--tamanhoFonteSegundaria);
-    line-height: 19px;
+    line-height: 23px;
+    height: 100%;
+    max-height: 250px;
 }
 
 .icones-container {
     display: flex;
+    height: 44px;
     width: 100%;
     justify-content: space-around;
 }
 
 .container-btn-card{
     display: flex;
-    gap: 20px;
+    gap: 1.25em;
+    margin-top: 0.5em;
+    width: 100%;
+    justify-content: center;
 }
 
 .container-btn-contatos {
+    width: 100%;
     display: flex;
-    gap: 50px;
+    gap: 3.125em;
+    justify-content: center;
+}
+
+.container-btn-contatos a{
+    text-decoration: none;
 }
 
 .btn-contato{
-    gap: 5px;
+    gap: 0.3125em;
     font-weight: bold;
+    box-sizing: border-box;
 }
 
 .btn-contato img {
@@ -233,4 +370,245 @@ h3{
     max-height: 18px;
 }
 
+.imagem-projeto{
+    width: 100%;
+}
 
+.btn a {
+    text-decoration: none;
+    color: var(--fontColor);
+    transition: 0.5s;
+}
+
+/*Menu Hamburguer e modal*/
+
+.modal{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin-top: var(--altura-fixa-header); 
+    padding-top: var(--espacamento-fixo-header);
+    z-index: 200;
+    background-color: var(--backgroundColor-modal);
+    backdrop-filter: var(--blur-modal);
+    top:0;
+    animation: fade 1s;
+    transition: 0.5s;
+}
+
+.modal h1{
+    text-align: center;
+    color: var(--corPrincipal);
+}
+
+.modal nav {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2em
+}
+
+.modal a{
+    font-size: var(--cabecalhoPrincipal);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--fontColor);
+    transition: 0.3s;
+}
+
+.modal a:hover{
+    font-size: var(--cabecalhoPrincipalHouver);
+    color: var(--corPrincipal);
+}
+
+.menu-hamburguer {
+    width: 33px;
+    height: 33px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.icone-menu, .icone-close{
+    cursor: pointer;
+    padding: 0.1em;
+}
+
+.menu-hamburguer:hover .icone-menu, 
+.menu-hamburguer:hover .icone-close{
+    background-color: var(--corPrincipal);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.menu-hamburguer:hover .icone-menu{
+    content: url(../assets/icones-headers/menu-hamburguer-alt.svg);
+}
+
+.menu-hamburguer:hover .icone-close{
+    content: url(../assets/icones-headers/close-alt.svg);
+}
+
+.hidde {
+    display: none;
+}
+
+/*light mode*/
+
+.ligth-mode {
+    background-color: var(--backgroundColor-light-mode);
+    color: var(--fontColor-light-mode);
+    transition: 0.5s;
+}
+
+.ligth-mode .btn-alt, .ligth-mode .btn-alt a{
+    color: var(--fontColor-light-mode);
+    transition: 0.5s;
+}
+
+.ligth-mode .modal, .ligth-mode .alt-header {
+    transition: 0.5s;
+    background-color: var(--backgroundColor-modal-light-mode);
+}
+
+@media (max-width: 950px) {
+
+
+    html {
+        scroll-padding-top: var(--altura-fixa-header-mobile);
+    }
+
+    body {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1.1em;        
+    }
+
+    .container-header {
+        padding: 1em 0;
+    }
+
+    .container-ap {
+        flex-direction: column-reverse;
+        gap: 1em;
+        text-align: center;
+    }
+
+    .container-ap-text {
+        gap: 1.5em;
+    }
+
+    .texto-sobre {
+        width: 100%;
+    }
+
+
+    .container-btn-ap {
+        flex-direction: column;
+        gap: 1em;
+        width: 100%;
+    }
+
+    .container-btn-ap .btn {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 1.1em 2em;
+        max-width: 455px;
+    }
+
+    .container-formacao {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .container-instituicao, .container-curso {
+        width: 100%;
+        align-items: start;
+        text-align: start;
+    }
+
+    .container-instituicao::after{
+        content: "";
+        display: block;
+        width: 50%;
+        height: 3px;
+        background-color: var(--corPrincipal);
+        margin-bottom: 0.5em;
+    }
+
+    .container-habilidades-icones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container-projeto-card {
+            grid-template-columns: 1fr;
+    }
+
+    .projeto-card {
+        padding: 1em;
+        gap: 1em;
+    }
+
+    .projeto-card p {
+        max-height: none;
+    }
+
+    .container-btn-card {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .container-btn-contatos {
+        flex-direction: column;
+        gap: 1em;
+        align-items: center;
+    }
+
+    .btn-contato {
+        width: 100%;
+    }
+
+    .modal{
+        margin-top: var(--altura-fixa-header-mobile);
+    }
+
+    .modal nav {
+        gap: 1em;
+    }
+
+    .switch-label {
+        width: 42px;
+        height: 20px;
+    }
+
+    .ball {
+        width: 20px;
+        height: 20px;
+    }
+
+    .switch-input:checked +.switch-label .ball{
+        transform: translateX(22px); /*22 = 42 (comprimento do label) - 20 (comprimento da bolinha)*/
+    }
+
+    .imagem-perfil {
+        width: 55%;
+        height: auto;
+    }
+}
+
+/* @media (max-width: 350px) {
+    .container-habilidades-icones {
+        grid-template-columns: 1fr;
+    }
+} */
