@@ -30,7 +30,7 @@
     
     --cabecalhoSegundario:  1.8em;
     --cabecalhoTerciario: 1.25em;
-    --cabecalho4: 1em
+    --cabecalho4: 1em;
 
      --altura-fixa-header: 94px;  /* 93 = (tamanho do header) + 1 da borda */
      --espacamento-fixo-header:  25px; /* 25 = espaço entre o header fixado com os demais objetos*/
@@ -74,7 +74,7 @@ p {
 }
 
 header {
-    width: 100vw;
+    width: 100%;
     position: sticky;
     top: 0;
     background-color: var(--backgroundColor);
@@ -175,7 +175,9 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap-reverse;
+    align-items: center;
+    width: 100%;
+    /* flex-wrap: wrap-reverse; */
 }
 
 .container-ap p {
@@ -185,6 +187,7 @@ h2 {
 .container-ap img {
     border-radius: 20px;
     border: 4px var(--corPrincipal) solid;
+    width: 17.5em
 }
 
 .container-ap-text{
@@ -192,7 +195,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.875em
+    gap: 1.25em;
 }
 
 h1 {
@@ -230,7 +233,8 @@ h1 {
 }
 
 .texto-sobre{
-    max-width:426px;
+    width: 50%;
+    /* max-width:426px; */
     text-align: center;
 }
 
@@ -357,6 +361,7 @@ h4 {
 .btn-contato{
     gap: 0.3125em;
     font-weight: bold;
+    box-sizing: border-box;
 }
 
 .btn-contato img {
@@ -469,7 +474,7 @@ h4 {
     background-color: var(--backgroundColor-modal-light-mode);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 950px) {
 
 
     html {
@@ -502,6 +507,10 @@ h4 {
         gap: 1.5em;
     }
 
+    .texto-sobre {
+        width: 100%;
+    }
+
 
     .container-btn-ap {
         flex-direction: column;
@@ -515,6 +524,7 @@ h4 {
 
     .btn {
         padding: 1.1em 2em;
+        max-width: 455px;
     }
 
     .container-formacao {
@@ -562,10 +572,11 @@ h4 {
     .container-btn-contatos {
         flex-direction: column;
         gap: 1em;
+        align-items: center;
     }
 
     .btn-contato {
-        justify-content: center;
+        width: 100%;
     }
 
     .modal{
@@ -595,3 +606,9 @@ h4 {
         height: auto;
     }
 }
+
+/* @media (max-width: 350px) {
+    .container-habilidades-icones {
+        grid-template-columns: 1fr;
+    }
+} */
