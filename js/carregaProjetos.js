@@ -24,7 +24,7 @@ function carregaCardProjetos(mode){
             iconesHabilidades: [
                 htmlHabilidade.icones, cssHabilidade.icones, JavaScriptHabilidade.icones
             ],
-            imagem: "../assets/projeto-imagens/contador-personalizado/contador-personalizado.png",
+            imagem: "assets/projeto-imagens/contador-personalizado/contador-personalizado.png",
             acesso: "",
             repositoriio: "https://github.com/oliver-will61/contador_personalizado"
         }, 
@@ -38,7 +38,7 @@ function carregaCardProjetos(mode){
             iconesHabilidades: [
                 pythonHabilidade.icones, pygameHabilidade.icones
             ],
-            imagem: "../assets/projeto-imagens/python-snake/python-snake.png",
+            imagem: "assets/projeto-imagens/python-snake/python-snake.png",
             acesso: "https://github.com/oliver-will61/python-snake",
             repositorio: "https://github.com/oliver-will61/python-snake"
         },
@@ -49,7 +49,7 @@ function carregaCardProjetos(mode){
             iconesHabilidades: [
                 typescriptHabilidade.icones, expressHabilidade.icones, mysqlHabilidade.icones
             ],
-            imagem: "../assets/projeto-imagens/api-sistema-hospitalar/api-sistema-hospitalar.png",
+            imagem: "assets/projeto-imagens/api-sistema-hospitalar/api-sistema-hospitalar.png",
             acesso: "https://github.com/oliver-will61/api-sistema-hospitalar",
             repositorio: "https://github.com/oliver-will61/api-sistema-hospitalar"
         },
@@ -60,7 +60,7 @@ function carregaCardProjetos(mode){
             iconesHabilidades: [
                 typescriptHabilidade.icones, expressHabilidade.icones, pythonHabilidade.icones, pandasHabilidade.icones
             ],
-            imagem: "../assets/projeto-imagens/goodbyepdf/goodbyepdf.png"
+            imagem: "assets/projeto-imagens/goodbyepdf/goodbyepdf.png"
         }
     ]
 
