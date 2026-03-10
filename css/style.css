@@ -184,7 +184,7 @@ h2 {
     font-weight: bold;
 }
 
-.container-ap img {
+.imagem-perfil{
     border-radius: 20px;
     border: 4px var(--corPrincipal) solid;
     width: 17.5em
