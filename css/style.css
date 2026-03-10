@@ -220,10 +220,8 @@ h1 {
     color: var(--fontColor);
     border-radius: 8px;
     padding: 0.7em 3em;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-decoration: none;
+    font-size: var(--tamanhoFonteSegundaria);
 }
 
 .btn-alt{
@@ -354,11 +352,14 @@ h4 {
     justify-content: center;
 }
 
-.container-btn-contatos a{
+a{
     text-decoration: none;
 }
 
 .btn-contato{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 0.3125em;
     font-weight: bold;
     box-sizing: border-box;
@@ -372,12 +373,6 @@ h4 {
 
 .imagem-projeto{
     width: 100%;
-}
-
-.btn a {
-    text-decoration: none;
-    color: var(--fontColor);
-    transition: 0.5s;
 }
 
 /*Menu Hamburguer e modal*/
