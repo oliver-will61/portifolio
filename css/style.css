@@ -55,6 +55,28 @@ html {
     scroll-padding-top: var(--altura-fixa-header);
 }
 
+
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--corPrincipal);
+}
+
+/* Para Firefox */
+
+/* Opções: auto, thin, none */
+ /* thumb e track */
+* {
+    scrollbar-width: auto; 
+    scrollbar-color: var(--corPrincipal) transparent;
+}
+
 body{
     background-color: var(--backgroundColor);
     font-family: var(--fonte);
