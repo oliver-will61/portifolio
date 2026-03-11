@@ -41,3 +41,14 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+button {
+    margin: 0;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+}
