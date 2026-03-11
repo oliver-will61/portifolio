@@ -25,8 +25,8 @@ function carregaCardProjetos(mode){
                 htmlHabilidade.icones, cssHabilidade.icones, JavaScriptHabilidade.icones
             ],
             imagem: "assets/projeto-imagens/contador-personalizado/contador-personalizado.png",
-            acesso: "",
-            repositoriio: "https://github.com/oliver-will61/contador_personalizado"
+            acesso: "https://github.com/oliver-will61/contador_personalizado",
+            repositorio: "https://github.com/oliver-will61/contador_personalizado"
         }, 
 
         {
@@ -50,8 +50,8 @@ function carregaCardProjetos(mode){
                 typescriptHabilidade.icones, expressHabilidade.icones, mysqlHabilidade.icones
             ],
             imagem: "assets/projeto-imagens/api-sistema-hospitalar/api-sistema-hospitalar.png",
-            acesso: "https://github.com/oliver-will61/api-sistema-hospitalar",
-            repositorio: "https://github.com/oliver-will61/api-sistema-hospitalar"
+            acesso: "https://github.com/oliver-will61/projeto-backend-sistema-hospitalar",
+            repositorio: "https://github.com/oliver-will61/projeto-backend-sistema-hospitalar"
         },
 
         {
@@ -60,7 +60,9 @@ function carregaCardProjetos(mode){
             iconesHabilidades: [
                 typescriptHabilidade.icones, expressHabilidade.icones, pythonHabilidade.icones, pandasHabilidade.icones
             ],
-            imagem: "assets/projeto-imagens/goodbyepdf/goodbyepdf.png"
+            imagem: "assets/projeto-imagens/goodbyepdf/goodbyepdf.png",
+            acesso: "https://github.com/oliver-will61/goodbyepdf_api",
+            repositorio: "https://github.com/oliver-will61/goodbyepdf_api"
         }
     ]
 
@@ -102,13 +104,11 @@ function carregaCardProjetos(mode){
 
         projetoCardHTML[i].innerHTML += 
             `<div class="container-btn-card">
-                <button class= "btn">
-                    <a href="${listaProjetos[i].acesso}">ACESSAR</a>
-                </button>
 
-                <button class=" btn btn-alt">
-                    <a href="${listaProjetos[i].repositorio}">REPOSITÓRIO</a>
-                </button>
+                <a href="${listaProjetos[i].acesso}" class="btn" target="_blank">ACESSAR</a>
+
+                <a href="${listaProjetos[i].repositorio}"  class="btn btn-alt" target="_blank">REPOSITÓRIO</a>
+
             </div>`
     }
     
