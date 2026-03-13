@@ -83,7 +83,6 @@ function carregaCardProjetos(mode){
 
         const iconesContainer = document.querySelectorAll("#icones-container") 
 
-        console.log(listaProjetos[i].iconesHabilidades);
         //carrega os icones das habilidades no HTML
 
         for(let y = 0; y < listaProjetos[i].iconesHabilidades.length; y++){    
