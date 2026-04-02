@@ -13,7 +13,7 @@ function carregaHabilidades(modo){
         if(modo == "light") {
             habilidadesHTML.innerHTML += `
                 <div class="habilidades-icones">
-                    <img src=${listaHabilidades[i].icones[0].iconeLight} alt=logo do ${listaHabilidades[i].titulo}>
+                    <img src="${listaHabilidades[i].icones[0].iconeLight}" alt=logo do ${listaHabilidades[i].titulo}>
                     <h4>${listaHabilidades[i].titulo}</h4>
                 </div>`            
         }
@@ -21,7 +21,7 @@ function carregaHabilidades(modo){
         else {
             habilidadesHTML.innerHTML += `
                 <div class="habilidades-icones">
-                    <img src=${listaHabilidades[i].icones[0].iconeDark} alt=logo do ${listaHabilidades[i].titulo}>
+                    <img src="${listaHabilidades[i].icones[0].iconeDark}" alt=logo do ${listaHabilidades[i].titulo}>
                     <h4>${listaHabilidades[i].titulo}</h4>
                 </div>`   
         }
