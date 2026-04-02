@@ -35,7 +35,7 @@ class Modal {
 
     carregaLinksNav (){
         //seleciona todas as <a> de <nav> e para fechar a modal ao clicar em qualquer uma delas 
-        const linkNav = document.querySelectorAll("#link-nav")
+        const linkNav = document.querySelectorAll(".link-nav")
 
         linkNav.forEach((i) => {
 

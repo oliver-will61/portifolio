@@ -33,6 +33,21 @@ export const listaHabilidades = [
     },
 
     {
+        titulo: "React",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/react.svg",
+            iconeLight: "assets/icones-habilidades/react.svg",
+        }]
+    },
+    {
+        titulo: "Next.js",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/nextjs.svg",
+            iconeLight: "assets/icones-habilidades/nextjs-light.svg",
+        }]
+    },
+
+    {
         titulo: "MySQL",
         icones: [{
             iconeDark: "assets/icones-habilidades/mysql.svg",

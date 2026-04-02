@@ -75,7 +75,7 @@ function carregaCardProjetos(mode){
 
             `<div class="projeto-card" id="projeto-card">
                 <h4>${listaProjetos[i].nome}</h4>
-                <img src =${listaProjetos[i].imagem} class="imagem-projeto">
+                <img src ="${listaProjetos[i].imagem}" class="imagem-projeto">
                 <p>${listaProjetos[i].descricao}</p>
 
                 <div class="icones-container" id="icones-container"></div>
@@ -89,12 +89,12 @@ function carregaCardProjetos(mode){
 
             if(mode == "light") {
                 iconesContainer[i].innerHTML += 
-                    `<img src = ${listaProjetos[i].iconesHabilidades[y][0].iconeLight}>`                                
+                    `<img src = "${listaProjetos[i].iconesHabilidades[y][0].iconeLight}">`                                
             } 
             
             else {
                 iconesContainer[i].innerHTML += 
-                    `<img src = ${listaProjetos[i].iconesHabilidades[y][0].iconeDark}>`
+                    `<img src = "${listaProjetos[i].iconesHabilidades[y][0].iconeDark}">`
             }
         }
 
