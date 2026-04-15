@@ -1,5 +1,5 @@
-export const listaHabilidades = [
-
+// linguagens
+export const linguagens = [
     {
         titulo: "TypeScript",
         icones: [{
@@ -7,7 +7,6 @@ export const listaHabilidades = [
             iconeLight: "assets/icones-habilidades/typescript.svg"
         }]
     },
-
     {
         titulo: "Python",
         icones: [{
@@ -15,7 +14,6 @@ export const listaHabilidades = [
             iconeLight: "assets/icones-habilidades/python.svg"
         }]
     },
-
     {
         titulo: "JavaScript",
         icones: [{
@@ -23,70 +21,6 @@ export const listaHabilidades = [
             iconeLight: "assets/icones-habilidades/js.svg"
         }]
     },
-
-    {
-        titulo: "Node.JS",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/nodejs.svg",
-            iconeLight: "assets/icones-habilidades/nodejs.svg"
-        }]
-    },
-
-    {
-        titulo: "React",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/react.svg",
-            iconeLight: "assets/icones-habilidades/react.svg",
-        }]
-    },
-    {
-        titulo: "Next.js",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/nextjs.svg",
-            iconeLight: "assets/icones-habilidades/nextjs-light.svg",
-        }]
-    },
-
-    {
-        titulo: "MySQL",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/mysql.svg",
-            iconeLight: "assets/icones-habilidades/mysql.svg"
-        }]
-    },
-
-    {
-        titulo: "Git",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/git.svg",
-            iconeLight: "assets/icones-habilidades/git.svg"
-        }]
-    },
-
-    {
-        titulo: "GitHub",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/github.svg",
-            iconeLight: "assets/icones-habilidades/github-light.svg"
-        }]
-    },
-
-    {
-        titulo: "Postman",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/postman.svg",
-            iconeLight: "assets/icones-habilidades/postman.svg"
-        }]
-    },
-
-    {
-        titulo: "Linux",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/linux.svg",
-            iconeLight: "assets/icones-habilidades/linux.svg"
-        }]
-    },
-
     {
         titulo: "Java",
         icones: [{
@@ -94,15 +28,6 @@ export const listaHabilidades = [
             iconeLight: "assets/icones-habilidades/java.svg"
         }]
     },
-
-    {
-        titulo: "Spring Boot",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/spring.svg",
-            iconeLight: "assets/icones-habilidades/spring.svg"
-        }]
-    },
-
     {
         titulo: "HTML",
         icones: [{
@@ -110,23 +35,38 @@ export const listaHabilidades = [
             iconeLight: "assets/icones-habilidades/html5.svg"
         }]
     },
-
     {
         titulo: "CSS3",
         icones: [{
             iconeDark: "assets/icones-habilidades/css3.svg",
             iconeLight: "assets/icones-habilidades/css3.svg"
         }]
-    },
+    }
+]
 
+// frameworks
+export const frameworks = [
     {
-        titulo: "AWS",
+        titulo: "Node.JS",
         icones: [{
-            iconeDark: "assets/icones-habilidades/aws.svg",
-            iconeLight: "assets/icones-habilidades/aws-light.svg"
+            iconeDark: "assets/icones-habilidades/nodejs.svg",
+            iconeLight: "assets/icones-habilidades/nodejs.svg"
         }]
     },
-
+    {
+        titulo: "Next.js",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/nextjs.svg",
+            iconeLight: "assets/icones-habilidades/nextjs-light.svg"
+        }]
+    },
+    {
+        titulo: "Spring Boot",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/spring.svg",
+            iconeLight: "assets/icones-habilidades/spring.svg"
+        }]
+    },
     {
         titulo: "Express",
         icones: [{
@@ -134,7 +74,24 @@ export const listaHabilidades = [
             iconeLight: "assets/icones-habilidades/express-light.svg"
         }]
     },
+    {
+        titulo: "Flutter",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/flutter.svg",
+            iconeLight: "assets/icones-habilidades/flutter.svg"
+        }]
+    }
+]
 
+// bibliotecas
+export const bibliotecas = [
+    {
+        titulo: "React",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/react.svg",
+            iconeLight: "assets/icones-habilidades/react.svg"
+        }]
+    },
     {
         titulo: "Bootstrap",
         icones: [{
@@ -142,31 +99,6 @@ export const listaHabilidades = [
             iconeLight: "assets/icones-habilidades/bootstrap.svg"
         }]
     },
-
-    {
-        titulo: "Docker",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/docker.svg",
-            iconeLight: "assets/icones-habilidades/docker.svg"
-        }]
-    },
-
-    {
-        titulo: "Flutter",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/flutter.svg",
-            iconeLight: "assets/icones-habilidades/flutter.svg"
-        }]
-    },
-
-    {
-        titulo: "MongoDB",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/mongodb.svg",
-            iconeLight: "assets/icones-habilidades/mongodb.svg"
-        }]
-    },
-
     {
         titulo: "GraphQL",
         icones: [{
@@ -174,23 +106,6 @@ export const listaHabilidades = [
             iconeLight: "assets/icones-habilidades/graphql.svg"
         }]
     },
-
-    {
-        titulo: "Jira",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/jira.svg",
-            iconeLight: "assets/icones-habilidades/jira.svg"
-        }]
-    },
-
-    {
-        titulo: "Figma",
-        icones: [{
-            iconeDark: "assets/icones-habilidades/figma.svg",
-            iconeLight: "assets/icones-habilidades/figma.svg"
-        }]
-    },
-
     {
         titulo: "Pandas",
         icones: [{
@@ -198,7 +113,6 @@ export const listaHabilidades = [
             iconeLight: "assets/icones-habilidades/pandas-light.svg"
         }]
     },
-
     {
         titulo: "Pygame",
         icones: [{
@@ -207,3 +121,96 @@ export const listaHabilidades = [
         }]
     }
 ]
+
+// banco de dados
+export const bancosDeDados = [
+    {
+        titulo: "MySQL",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/mysql.svg",
+            iconeLight: "assets/icones-habilidades/mysql.svg"
+        }]
+    },
+    {
+        titulo: "MongoDB",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/mongodb.svg",
+            iconeLight: "assets/icones-habilidades/mongodb.svg"
+        }]
+    }
+]
+
+// ferramentas
+export const ferramentas = [
+    {
+        titulo: "Git",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/git.svg",
+            iconeLight: "assets/icones-habilidades/git.svg"
+        }]
+    },
+    {
+        titulo: "GitHub",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/github.svg",
+            iconeLight: "assets/icones-habilidades/github-light.svg"
+        }]
+    },
+    {
+        titulo: "Postman",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/postman.svg",
+            iconeLight: "assets/icones-habilidades/postman.svg"
+        }]
+    },
+    {
+        titulo: "Jira",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/jira.svg",
+            iconeLight: "assets/icones-habilidades/jira.svg"
+        }]
+    },
+    {
+        titulo: "Figma",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/figma.svg",
+            iconeLight: "assets/icones-habilidades/figma.svg"
+        }]
+    }
+]
+
+// devops
+export const devops = [
+    {
+        titulo: "Linux",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/linux.svg",
+            iconeLight: "assets/icones-habilidades/linux.svg"
+        }]
+    },
+    {
+        titulo: "AWS",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/aws.svg",
+            iconeLight: "assets/icones-habilidades/aws-light.svg"
+        }]
+    },
+    {
+        titulo: "Docker",
+        icones: [{
+            iconeDark: "assets/icones-habilidades/docker.svg",
+            iconeLight: "assets/icones-habilidades/docker.svg"
+        }]
+    }
+]
+
+// Dicionario que contém as listas de categorias
+export const categoriaHabilidades = {
+    linguagens,
+    frameworks,
+    bibliotecas,
+    bancosDeDados,
+    ferramentas,
+    devops
+}
+

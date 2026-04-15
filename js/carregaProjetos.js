@@ -1,17 +1,14 @@
-import {listaHabilidades} from "../constants/habilidades.js"
+import {categoriaHabilidades} from "../constants/habilidades.js"
 
-
-const nodeHabilidade = listaHabilidades.find(item => item.titulo === "Node.JS")
-const expressHabilidade = listaHabilidades.find(item => item.titulo == "Express")
-const mongoHabilidade = listaHabilidades.find(item => item.titulo == "MongoDB")
-const JavaScriptHabilidade = listaHabilidades.find(item => item.titulo == "JavaScript")
-const cssHabilidade = listaHabilidades.find(item => item.titulo == "CSS3")
-const htmlHabilidade = listaHabilidades.find(item => item.titulo == "HTML")
-const pythonHabilidade = listaHabilidades.find(item => item.titulo == "Python")
-const typescriptHabilidade = listaHabilidades.find(item => item.titulo == "TypeScript")
-const mysqlHabilidade = listaHabilidades.find(item => item.titulo === "MySQL")
-const pandasHabilidade = listaHabilidades.find(item => item.titulo === "Pandas");
-const pygameHabilidade = listaHabilidades.find(item => item.titulo === "Pygame")
+const expressHabilidade = categoriaHabilidades.frameworks.find(item => item.titulo == "Express")
+const JavaScriptHabilidade = categoriaHabilidades.linguagens.find(item => item.titulo == "JavaScript")
+const cssHabilidade = categoriaHabilidades.linguagens.find(item => item.titulo == "CSS3")
+const htmlHabilidade = categoriaHabilidades.linguagens.find(item => item.titulo == "HTML")
+const pythonHabilidade = categoriaHabilidades.linguagens.find(item => item.titulo == "Python")
+const typescriptHabilidade = categoriaHabilidades.linguagens.find(item => item.titulo == "TypeScript")
+const mysqlHabilidade = categoriaHabilidades.bancosDeDados.find(item => item.titulo === "MySQL")
+const pandasHabilidade = categoriaHabilidades.bibliotecas.find(item => item.titulo === "Pandas");
+const pygameHabilidade = categoriaHabilidades.bibliotecas.find(item => item.titulo === "Pygame")
 
 function carregaCardProjetos(mode){
     const listaProjetos = [
