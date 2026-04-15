@@ -9,11 +9,6 @@ function lightMode(){
     // Variável para armazenar a posição do scroll
     let scrollPosition = 0
 
-    function toggleTheme() {
-        
-    }
-    
-
     btnSwitch.addEventListener('change', function () {
 
         // Salva a posição atual do scroll antes da mundaça do modo claro ou escuro
