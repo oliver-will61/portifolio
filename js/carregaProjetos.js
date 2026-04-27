@@ -9,9 +9,28 @@ const typescriptHabilidade = categoriaHabilidades.linguagens.find(item => item.t
 const mysqlHabilidade = categoriaHabilidades.bancosDeDados.find(item => item.titulo === "MySQL")
 const pandasHabilidade = categoriaHabilidades.bibliotecas.find(item => item.titulo === "Pandas");
 const pygameHabilidade = categoriaHabilidades.bibliotecas.find(item => item.titulo === "Pygame")
+const nodeHabilidade = categoriaHabilidades.frameworks.find(item => item.titulo === "Node.JS")
 
 function carregaCardProjetos(mode){
     const listaProjetos = [
+        {
+            nome: "Sistema de Gerenciamento de Mensagens de Atendimento",
+            descricao: `Plataforma que gerencia mensagens de atendimento, consumindo uma API.
+
+                Projeto desenvolvido para a Renner, cujo objetivo era armazenar e recuperar, via API, mensagens de atendimento. O uso da plataforma permite que o usuário não precise mais utilizar bloco de notas para armazenar ou escrever repetidamente as mesmas mensagens.
+
+                Foram utilizados HTML, CSS e JavaScript no front-end, e Node.js com Express no back-end.
+
+                Na plataforma, existe uma lista de mensagens na qual o usuário pode selecionar as desejadas. Além disso, o usuário pode criar atalhos para as mensagens, o que facilita a busca, e também pode criar novas mensagens, que ficam armazenadas no servidor.
+
+                A plataforma proporciona agilidade, eficiência e padronização para a empresa.`,
+            iconesHabilidades: [
+                htmlHabilidade.icones, cssHabilidade.icones, JavaScriptHabilidade.icones, expressHabilidade.icones, nodeHabilidade.icones 
+            ],
+            imagem: "assets/projeto-imagens/csc-ti-sistema-de-logs-de-atendimento/csc-ti-logs.jpeg",
+            acesso: "",
+            repositorio: ""
+        },
         {
             nome: "Contador Personalizado",
             descricao: `Aplicação web que realiza contagem dinâmicos utilizando HTML, CSS e JavaScript puro, permitindo ao usuário criar múltiplos 
