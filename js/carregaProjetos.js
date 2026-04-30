@@ -25,12 +25,25 @@ function carregaCardProjetos(mode){
 
                 A plataforma proporciona agilidade, eficiência e padronização para a empresa.`,
             iconesHabilidades: [
-                htmlHabilidade.icones, cssHabilidade.icones, JavaScriptHabilidade.icones, expressHabilidade.icones, nodeHabilidade.icones 
+                htmlHabilidade.icones, cssHabilidade.icones, expressHabilidade.icones, nodeHabilidade.icones 
             ],
             imagem: "assets/projeto-imagens/csc-ti-sistema-de-logs-de-atendimento/csc-ti-logs.jpeg",
             acesso: "",
             repositorio: ""
         },
+
+        {
+            nome: "Extensão de autopreenchimento dos Correios",
+                descricao: `Extensão para o Chrome que automatiza o preenchimento do formulário de coleta dos Correios. Desenvolvida para as Lojas Renner S.A., a extensão permite que o usuário informe dados como número da loja, objeto da coleta, nota fiscal e informações do solicitante. Ao clicar no botão, é consumida uma API que busca o endereço com base no número da loja informado e preenche automaticamente todos os campos do formulário, gerando mais rapidez, precisão e redução de erros no processo.
+                Foram utilizadas tecnologias como HTML, CSS e JavaScript no front-end, e Node.js com Express no back-end.`,
+            iconesHabilidades: [
+                htmlHabilidade.icones, cssHabilidade.icones, expressHabilidade.icones, nodeHabilidade.icones 
+            ],
+            imagem: "assets/projeto-imagens/csc-ti-extensao-correios/csc-ti-extensao-correios.jpeg",
+            acesso: "",
+            repositorio: ""
+        },
+
         {
             nome: "Contador Personalizado",
             descricao: `Aplicação web que realiza contagem dinâmicos utilizando HTML, CSS e JavaScript puro, permitindo ao usuário criar múltiplos 
