@@ -356,9 +356,10 @@ h4 {
 
 .container-projeto-card{
     display: grid;
-    grid-template-columns: 1fr 1fr;    
+    grid-template-columns: repeat(auto-fill, minmax(490px, auto));
+    justify-content: center;
+    width: 100%;
     gap: 3.75em;
-    
 }
 
 .projeto-card{
@@ -615,7 +616,8 @@ a{
     }
 
     .container-projeto-card {
-            grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
+        width: auto;
     }
 
     .projeto-card {
